@@ -1,0 +1,17 @@
+[
+  {
+    "name": "dress 1",
+    "description": "this is beautiful dress 1",
+    "price": "1.00"
+  },
+  {
+    "name": "dress 2",
+    "description": "this is beautiful dress 2",
+    "price": "2.00"
+  },
+  {
+    "name": "dress 3",
+    "description": "this is beautiful dress 3",
+    "price": "3.00"
+  }
+]
