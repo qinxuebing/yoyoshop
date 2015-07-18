@@ -9,8 +9,10 @@ define([
             template:template,
             controller:['$scope','productService',controller],
             link:function(scope,element,attr,ctrl){
-                debugger;
-                ctrl.getProducts();
+
+                ctrl.getProducts().then(function(){
+                   console.log(scope);
+                });
             }
         };
     };

@@ -4,68 +4,52 @@ requirejs.config({
         angular: 'angular',
         jquery: 'jquery',
         ngGrid: 'ui-grid',
+        uiBootstrap:'ui-bootstrap',
         q: 'q',
         text:'text'
+    },
+    shim:{
+        'angular':{
+            deps:['jquery'],
+            exports:'angular'
+        },
+        'ngGrid':{
+            deps:['jquery','angular']
+        },
+        'uiBootstrap':{
+            deps:['jquery','angular']
+        }
     }
 });
 
-requirejs(['jquery',
-        'angular',
+requirejs([
         'ngGrid',
-        'text'
+        'uiBootstrap'
     ],
     function () {
         'use strict';
 
         function initialize(app) {
             require(['javascript/directive/product-directive',
-                'javascript/service/product-service'
-            ], function (productDirective,ProductService) {
+                'javascript/service/product-service',
+                'javascript/directive/shopping-cart-directive',
+                'javascript/directive/yoyoshop-directive'
+            ], function (productDirective,
+                         ProductService,
+                         shoppingCartDirective,
+                         yoyoshopDirective
+                ) {
                 app.directive('product',productDirective);
-                app.constant('productService',new ProductService());
-
-
-
+                app.directive('shoppingCart',shoppingCartDirective);
+                app.directive('yoyoshop',yoyoshopDirective);
+                app.service('productService',['$http',ProductService]);
                 angular.bootstrap(document, ['app']);
             });
         };
 
 
-        var app = angular.module('app', ['ui.grid']);
+        var app = angular.module('app', ['ui.bootstrap','ui.grid']);
 
         initialize(app);
-
-        //app.directive('category', function () {
-        //    return {
-        //        scope: {},
-        //        restrict: 'E',
-        //        template: '<div ui-grid="gridOptions"></div>',
-        //        controller: ['$scope', '$http', function ($scope, $http) {
-        //            $scope.gridOptions = {
-        //                enableSorting: true,
-        //                columnDefs: [
-        //                    {field: 'firstName'},
-        //                    {field: 'lastName'},
-        //                    {field: 'company'},
-        //                    {field: 'employed'}
-        //                ],
-        //                onRegisterApi: function (gridApi) {
-        //                    $scope.grid1Api = gridApi;
-        //                }
-        //            };
-        //
-        //            $http.get('/data/100.json')
-        //                .success(function (data) {
-        //                    console.log('data', data);
-        //                    $scope.gridOptions.data = data;
-        //                }).error(function () {
-        //                    console.log('get data fail');
-        //                });
-        //        }]
-        //
-        //    }
-        //});
-
-
     });
 

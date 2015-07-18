@@ -1,3 +1,3 @@
 please run follow command in git console
 npm install
-node bin/start
+node bin/www

@@ -2,16 +2,19 @@
   {
     "name": "dress 1",
     "description": "this is beautiful dress 1",
-    "price": "1.00"
+    "price": "1.00",
+    "path": "http://localhost:3000/images/dress0.jpg"
   },
   {
     "name": "dress 2",
     "description": "this is beautiful dress 2",
-    "price": "2.00"
+    "price": "2.00",
+    "path": "http://localhost:3000/images/dress1.jpg"
   },
   {
     "name": "dress 3",
     "description": "this is beautiful dress 3",
-    "price": "3.00"
+    "price": "3.00",
+    "path": "http://localhost:3000/images/dress2.jpg"
   }
 ]

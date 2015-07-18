@@ -6,10 +6,9 @@ define([
         this.scope.product=[];
         this.service = service;
         this.getProducts = function(){
+            var self = this;
             return this.service.getProducts().then(function(data){
-                console.log('get products',data);
-                this.scope.products = data;
-                this.scope.$apply();
+                self.scope.products = data.data;
             });
         };
 
