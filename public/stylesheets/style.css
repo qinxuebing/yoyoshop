@@ -7,11 +7,25 @@ a {
     color: #00B7FF;
 }
 
-.product .left {
+.menu{
+    position: absolute;
+    right: 100px;
+}
+
+.product{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.product .item {
+    overflow: hidden;
+
+}
+.product .item .left {
     float: left;
 }
 
-.product .rigth {
+.product .item .rigth {
     float: right;
 }
 
