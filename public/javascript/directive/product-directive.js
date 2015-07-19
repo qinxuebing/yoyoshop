@@ -9,10 +9,7 @@ define([
             template:template,
             controller:['$scope','productService',controller],
             link:function(scope,element,attr,ctrl){
-
-                ctrl.getProducts().then(function(){
-                   console.log(scope);
-                });
+                ctrl.getProducts();
             }
         };
     };

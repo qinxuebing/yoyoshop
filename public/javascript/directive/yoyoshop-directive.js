@@ -9,6 +9,7 @@ define([
             template:template,
             controller:['$scope', controller],
             link:function(scope,element,attr,ctrl){
+               scope.ctrl = ctrl;
             }
         };
     };
