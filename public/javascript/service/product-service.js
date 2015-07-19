@@ -5,8 +5,9 @@ define([
         this.http = $http;
         this.getProducts = function () {
             var defer = q.defer();
-            return this.http.get('data/dress.json')
+            return this.http.get('/products')
                 .success(function (data) {
+                    console.log('get data success',data);
                     defer.resolve(data);
                 }).error(function () {
                     console.log('get data fail');

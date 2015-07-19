@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 //var users = require('./routes/users');
+var products = require('./routes/products');
 
 var app = express();
 
@@ -32,6 +33,7 @@ app.use(express.static('./node_modules/q'));
 app.use(express.static('./node_modules/angular-bootstrap/dist'));
 app.use(express.static('./node_modules/bootstrap/dist/css'));
 app.use('/', routes);
+app.use('/products', products);
 
 //app.use('/users', users);
 
