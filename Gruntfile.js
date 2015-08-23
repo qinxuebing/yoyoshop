@@ -49,17 +49,8 @@ module.exports = function (grunt) {
                     'dist/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
                 }
             }
-        },
-        //requirejs: {
-        //    compile: {
-        //        options: {
-        //            baseUrl: ".",
-        //            mainConfigFile: "src/javascript/config.js",
-        //            name: "src/javascript/main", // assumes a production build using almond
-        //            out: "dist"
-        //        }
-        //    }
-        //}
+        }
+
     });
 
     grunt.loadNpmTasks('grunt-contrib-uglify');
