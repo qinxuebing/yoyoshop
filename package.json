@@ -20,7 +20,8 @@
     "q": "^1.4.1",
     "requirejs": "^2.1.19",
     "requirejs-text": "^2.0.12",
-    "serve-favicon": "~2.3.0"
+    "serve-favicon": "~2.3.0",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
     "debug": "~2.2.0",

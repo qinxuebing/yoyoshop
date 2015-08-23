@@ -1,19 +1,19 @@
 <div class="product">
     <div class="icon-right-top">
-        <button type="button" class="btn btn-default btn-sm">
+        <button type="button" class="btn btn-default btn-sm" ng-click="productCtl.back()">
             <span class="glyphicon glyphicon-chevron-up"></span>
         </button>
     </div>
 
     <div class="icon-right-bottom">
         <button type="button" class="btn btn-default btn-sm">
-            <span class="glyphicon glyphicon-chevron-down"></span>
+            <span class="glyphicon glyphicon-chevron-down"  ng-click="productCtl.next()"></span>
         </button>
     </div>
 
     <div ng-repeat="item in products" class="item">
         <div class="left">
-            <img ng-src="{{item.path}}" style="width:185px;height: 275px">
+            <img ng-src="{{item.path}}" style="width:185px;height: 275px" id="{{item._id}}">
         </div>
         <div class="right">
             <div class="">

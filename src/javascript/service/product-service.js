@@ -1,6 +1,8 @@
 define([
      'q'
 ], function (q) {
+    'use strict';
+
     return function ($http) {
         this.http = $http;
         this.getProducts = function () {

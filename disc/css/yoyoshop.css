@@ -12,10 +12,22 @@
 .product .item .rigth {
   float: right;
 }
+.product .icon-right-top {
+  right: 20%;
+  top: 20%;
+  position: fixed;
+}
+.product .icon-right-bottom {
+  right: 20%;
+  bottom: 10%;
+  position: fixed;
+  _position: absolute;
+}
 
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  position: relative;
 }
 a {
   color: #00B7FF;

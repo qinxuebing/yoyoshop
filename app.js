@@ -30,8 +30,9 @@ app.use(express.static('./node_modules/requirejs'));
 app.use(express.static('./node_modules/requirejs-text'));
 app.use(express.static('./node_modules/angular-ui-grid'));
 app.use(express.static('./node_modules/q'));
-app.use(express.static('./node_modules/angular-bootstrap/dist'));
+app.use(express.static('./node_modules/angular-bootstrap'));
 app.use(express.static('./node_modules/bootstrap/dist'));
+app.use(express.static('./node_modules/underscore'));
 app.use('/', routes);
 app.use('/products', products);
 
