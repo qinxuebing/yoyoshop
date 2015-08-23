@@ -1,0 +1,35 @@
+.product {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.product .item {
+  overflow: hidden;
+}
+.product .item .left {
+  float: left;
+}
+.product .item .rigth {
+  float: right;
+}
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+a {
+  color: #00B7FF;
+}
+.menu {
+  margin-right: 20%;
+  width: 100%;
+}
+.menu div {
+  margin-left: 70%;
+}
+.content {
+  margin-top: 30px;
+}
+.content .product {
+  margin-left: 20%;
+}

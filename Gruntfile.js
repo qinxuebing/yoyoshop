@@ -3,16 +3,29 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         jshint: {
-            files: ['Gruntfile.js', 'public/**/*.js', 'test/**/*.js'],
+            files: ['Gruntfile.js', 'src/**/*.js', 'test/**/*.js'],
             options: {
                 globals: {
                     jQuery: true
                 }
             }
         },
+
+        // running `grunt less` will compile once
+        less: {
+            development: {
+                options: {
+                    paths: ["src/stylesheets"]
+                },
+                files: {
+                    "./disc/css/<%= pkg.name %>.css": "./src/stylesheets/**/*.less"
+                }
+            }
+        },
+        // running `grunt watch` will watch for changes
         watch: {
-            files: ['<%= jshint.files %>'],
-            tasks: ['jshint']
+            files: "./css/*.less",
+            tasks: ["less"]
         },
         concat: {
             options: {
@@ -36,7 +49,7 @@ module.exports = function (grunt) {
                     'dist/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
                 }
             }
-        }
+        },
         //requirejs: {
         //    compile: {
         //        options: {
@@ -55,6 +68,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-requirejs');
+    grunt.loadNpmTasks('grunt-contrib-less');
 
     grunt.registerTask('default', ['concat']);
 
