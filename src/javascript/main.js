@@ -1,27 +1,3 @@
-requirejs.config({
-    baseUrl: '/',
-    paths: {
-        angular: 'angular',
-        jquery: 'jquery',
-        ngGrid: 'ui-grid',
-        uiBootstrap:'ui-bootstrap',
-        q: 'q',
-        text:'text'
-    },
-    shim:{
-        'angular':{
-            deps:['jquery'],
-            exports:'angular'
-        },
-        'ngGrid':{
-            deps:['jquery','angular']
-        },
-        'uiBootstrap':{
-            deps:['jquery','angular']
-        }
-    }
-});
-
 requirejs([
         'ngGrid',
         'uiBootstrap'
@@ -47,9 +23,7 @@ requirejs([
             });
         };
 
-
         var app = angular.module('app', ['ui.bootstrap','ui.grid']);
-
         initialize(app);
     });
 

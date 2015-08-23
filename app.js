@@ -6,7 +6,6 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
-//var users = require('./routes/users');
 var products = require('./routes/products');
 
 var app = express();
@@ -21,7 +20,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'src')));
 
 //app.use(express.static('public'));
 app.use(express.static('./node_modules/angular'));
@@ -31,7 +30,7 @@ app.use(express.static('./node_modules/requirejs-text'));
 app.use(express.static('./node_modules/angular-ui-grid'));
 app.use(express.static('./node_modules/q'));
 app.use(express.static('./node_modules/angular-bootstrap/dist'));
-app.use(express.static('./node_modules/bootstrap/dist/css'));
+app.use(express.static('./node_modules/bootstrap/dist'));
 app.use('/', routes);
 app.use('/products', products);
 
