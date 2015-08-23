@@ -24,7 +24,5 @@ define([], function () {
                 self.scope.$apply();
             });
         };
-
-
-    }
+    };
 });
