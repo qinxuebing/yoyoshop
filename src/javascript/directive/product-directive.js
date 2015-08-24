@@ -16,7 +16,7 @@ define([
                 scope.pageIndex =0;
                 scope.pageNumber =5;
 
-                ctrl.getProductByPage(scope.pageIndex, scope.pageNumber);
+                ctrl.getProductByPage();
 
             }
         };

@@ -6,14 +6,15 @@
     </div>
 
     <div class="icon-right-bottom">
-        <button type="button" class="btn btn-default btn-sm">
-            <span class="glyphicon glyphicon-chevron-down"  ng-click="productCtl.next()"></span>
+        <button type="button" class="btn btn-default btn-sm"  ng-click="productCtl.next()">
+            <span class="glyphicon glyphicon-chevron-down" ></span>
         </button>
     </div>
 
     <div ng-repeat="item in products" class="item">
         <div class="left">
-            <img ng-src="{{item.path}}" style="width:185px;height: 275px" id="{{item._id}}">
+            <img ng-src="{{item.path}}" style="width:185px;height: 275px" id="{{item._id}}" ng-if="!item.isLocalStorage">
+            <img src="{{item.img}}" style="width:185px;height: 275px" ng-if="item.isLocalStorage">
         </div>
         <div class="right">
             <div class="">
