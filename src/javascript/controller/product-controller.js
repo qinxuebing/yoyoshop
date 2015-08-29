@@ -30,17 +30,21 @@ define([
                 return products.slice(pageIndex * pageNumber, (pageIndex + 1) * pageNumber);
             }).then(function (products) {
                 products.forEach(function (product) {
-                    var img = self._getProductsFromLocalStorage(product._id);
-                    console.log(product._id,'get img from localstorage:',img);
-                    if (img && img.length > 0) {
-                        product.img = 'data:image/jpeg;base64,'+img;
-                        product.isLocalStorage = true;
-                    }
+                   self.setImageResource(product);
                 });
-                console.log('get product img:',products);
                 self.scope.products = products;
                 self.scope.$apply();
             });
+        };
+
+        this.setImageResource = function(product){
+            var img = this._getProductFromLocalStorage(product._id);
+            if (img && img.length > 0) {
+                product.data = 'data:image/png;base64,'+img;
+                product.isLocalStorage = true;
+            }else{
+                product.isLocalStorage = false;
+            }
         };
 
         this.back = function () {
@@ -92,7 +96,7 @@ define([
             }
         };
 
-        this._getProductsFromLocalStorage = function (id) {
+        this._getProductFromLocalStorage = function (id) {
             return this.localstorageService.getImg(id);
         };
     };

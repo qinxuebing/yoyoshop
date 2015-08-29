@@ -13,8 +13,7 @@
 
     <div ng-repeat="item in products" class="item">
         <div class="left">
-            <img ng-src="{{item.path}}" style="width:185px;height: 275px" id="{{item._id}}" ng-if="!item.isLocalStorage">
-            <img src="{{item.img}}" style="width:185px;height: 275px" ng-if="item.isLocalStorage">
+            <image-directive img="item"></image-directive>
         </div>
         <div class="right">
             <div class="">

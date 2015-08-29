@@ -19,7 +19,7 @@ define([], function () {
             canvas.height = img.height;
 
             var ctx = canvas.getContext("2d");
-            ctx.drawImage(img, 0, 0);
+            ctx.drawImage(img, 0, 0,canvas.width,canvas.height);
 
             var dataURL = canvas.toDataURL("image/png");
 
