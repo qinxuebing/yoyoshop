@@ -7,8 +7,7 @@ requirejs.config({
         uiBootstrap:'ui-bootstrap',
         q: 'q',
         text:'text',
-        main:'javascript/main',
-        underscore:'underscore'
+        main:'main'
     },
     shim:{
         'angular':{

@@ -25,31 +25,18 @@ module.exports = function (grunt) {
         // running `grunt watch` will watch for changes
         watch: {
             files: "./css/*.less",
-            tasks: ["less"]
+            tasks: ["less","copy"]
         },
-        concat: {
-            options: {
-                // define a string to put between each file in the concatenated output
-                separator: ';'
+
+        copy: {
+            main: {
+                files: [
+                    // includes files within path
+                    {expand: true,flatten: true, src: ['src/images/*'], dest: 'disc/images/'},
+                    {expand: true, flatten: true, cwd: 'src/', src: ['index.html'], dest: 'disc/', filter: 'isFile'}
+                ],
             },
-            dist: {
-                // the files to concatenate
-                src: ['src/**/*.js'],
-                // the location of the resulting JS file
-                dest: 'dist/<%= pkg.name %>.js'
-            }
         },
-        uglify: {
-            options: {
-                // the banner is inserted at the top of the output
-                banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
-            },
-            dist: {
-                files: {
-                    'dist/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
-                }
-            }
-        }
 
     });
 
@@ -60,6 +47,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
     grunt.registerTask('default', ['concat']);
 

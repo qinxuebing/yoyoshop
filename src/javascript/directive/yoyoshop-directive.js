@@ -1,6 +1,6 @@
 define([
     'text!template/yoyoshop.html',
-    'javascript/controller/yoyoshop-controller'
+    'controller/yoyoshop-controller'
 ],function(template,controller){
     var yoyoshopDirective = function(){
         return{

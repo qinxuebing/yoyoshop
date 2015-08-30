@@ -6,3 +6,5 @@
     * mongoimport --db test --collection dress --drop --file \yoyoshop\src\data\db-dress.json
 
 * visit link:http://localhost:3000/
+
+* build js files: node node_modules/requirejs/bin/r.js -o app.build.js
