@@ -1,5 +1,6 @@
 # please run follow command in git console
 * npm install
+* grunt
 * node bin/www
 * start mongodb:
     * mongod --dbpath f:\data\db
@@ -7,4 +8,3 @@
 
 * visit link:http://localhost:3000/
 
-* build js files: node node_modules/requirejs/bin/r.js -o app.build.js
