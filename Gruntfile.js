@@ -24,10 +24,15 @@ module.exports = function (grunt) {
                 }
             }
         },
-        // running `grunt watch` will watch for changes
+
         watch: {
-            files: "./css/*.less",
-            tasks: ["less", "copy"]
+            scripts: {
+                files: ['./src/**/*'],
+                tasks: ['package'],
+                options: {
+                    livereload: true,
+                },
+            },
         },
 
         copy: {
@@ -78,6 +83,17 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
 
-    grunt.registerTask('default', ['clean','requirejs', 'less', 'copy']);
+
+    grunt.registerTask('package', ['clean','requirejs', 'less', 'copy']);
+
+    grunt.registerTask('start',function(){
+        grunt.util.spawn({
+            cmd:'node',
+            args:['bin/www']
+        });
+        grunt.task.run('watch');
+    });
+
+    grunt.registerTask('default',['package','start']);
 
 };
