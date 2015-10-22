@@ -48,7 +48,7 @@ define([
         };
 
         this.back = function () {
-            console.log('go to back...................');
+            console.log('go to back.....1.....5........');
             this.saveImgs();
 
             if (this.scope.pageIndex > 0) {

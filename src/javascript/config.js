@@ -4,25 +4,26 @@ requirejs.config({
         angular: 'angular',
         jquery: 'jquery',
         ngGrid: 'ui-grid',
-        uiBootstrap:'ui-bootstrap',
+        uiBootstrap: 'ui-bootstrap',
         q: 'q',
-        text:'text',
-        main:'main'
+        text: 'text',
+        main: 'main',
+        d3: 'd3'
     },
-    shim:{
-        'angular':{
-            deps:['jquery'],
-            exports:'angular'
+    shim: {
+        'angular': {
+            deps: ['jquery'],
+            exports: 'angular'
         },
-        'ngGrid':{
-            deps:['jquery','angular']
+        'ngGrid': {
+            deps: ['jquery', 'angular']
         },
-        'uiBootstrap':{
-            deps:['jquery','angular']
+        'uiBootstrap': {
+            deps: ['jquery', 'angular']
         }
     },
     deps: ["main"],
-    callback: function(module1) {
+    callback: function (module1) {
 
     }
 });

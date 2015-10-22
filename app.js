@@ -33,6 +33,7 @@ app.use(express.static('./node_modules/q'));
 app.use(express.static('./node_modules/angular-bootstrap'));
 app.use(express.static('./node_modules/bootstrap/dist'));
 app.use(express.static('./node_modules/underscore'));
+app.use(express.static('./node_modules/d3'));
 app.use('/', routes);
 app.use('/products', products);
 
