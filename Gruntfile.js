@@ -33,6 +33,13 @@ module.exports = function (grunt) {
                     livereload: true,
                 },
             },
+            styles: {
+                files: ['./src/stylesheets/**/*'], // which files to watch
+                tasks: ['less'],
+                options: {
+                    nospawn: true
+                }
+            }
         },
 
         copy: {
