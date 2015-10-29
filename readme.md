@@ -1,7 +1,7 @@
 # please run follow command in git console
 * npm install
 * grunt
-* node bin/www
+
 * start mongodb:
     * mongod --dbpath f:\data\db
     * mongoimport --db test --collection dress --drop --file \yoyoshop\src\data\db-dress.json
