@@ -1,17 +1,17 @@
 define([
-    'text!template/yoyoshop.html',
-    'controller/yoyoshop-controller'
+    'text!register/register.html',
+    'register/register-controller'
 ],function(template,controller){
-    var yoyoshopDirective = function(){
+    var registerDirective = function(){
         return{
             restrict:'E',
             scope:{},
             template:template,
             controller:['$scope', controller],
             link:function(scope,element,attr,ctrl){
-               scope.ctrl = ctrl;
+
             }
         };
     };
-    return yoyoshopDirective;
+    return registerDirective;
 });

@@ -20,8 +20,15 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-//app.use(express.static(path.join(__dirname, 'src')));
-app.use(express.static(path.join(__dirname, 'disc')));
+
+//for develop
+app.use(express.static(path.join(__dirname, 'src')));
+app.use(express.static(path.join(__dirname, 'src/javascript')));
+//end for develop
+
+//for minified version
+//app.use(express.static(path.join(__dirname, 'disc')));
+//end for minified version
 
 //app.use(express.static('public'));
 app.use(express.static('./node_modules/angular'));

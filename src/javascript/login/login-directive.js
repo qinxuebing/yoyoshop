@@ -9,7 +9,11 @@ define([
             template:template,
             controller:['$scope', controller],
             link:function(scope,element,attr,ctrl){
+                scope.activeTab = 0;
                 scope.ctrl = ctrl;
+                scope.switchTab = function(event){
+                   scope.activeTab =parseInt($(event.target).attr('tab-index'),10);
+                }
             }
         };
     };

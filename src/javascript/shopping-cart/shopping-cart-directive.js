@@ -1,6 +1,6 @@
 define([
-    'text!template/shopping-cart.html',
-    'controller/shopping-cart-controller'
+    'text!shopping-cart/shopping-cart.html',
+    'shopping-cart/shopping-cart-controller'
 ],function(template,controller){
     var shoppingCartDirective = function(){
         return{

@@ -20,7 +20,8 @@ module.exports = function (grunt) {
                     paths: ["src/stylesheets"]
                 },
                 files: {
-                    "./disc/css/<%= pkg.name %>.css": "./src/stylesheets/**/*.less"
+                    "./disc/css/<%= pkg.name %>.css": "./src/stylesheets/**/*.less",
+                    "./src/css/<%= pkg.name %>.css": "./src/stylesheets/**/*.less"
                 }
             }
         },

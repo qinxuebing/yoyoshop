@@ -18,7 +18,6 @@ define(function(){
                 }else{
                     imgElement.attr('src', img.path);
                 }
-                console.log('in image directive:',element);
             }
         };
     };

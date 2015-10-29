@@ -1,6 +1,6 @@
 define([
-    'text!template/product.html',
-    'controller/product-controller'
+    'text!product/product.html',
+    'product/product-controller'
 ],function(template,controller){
     'use strict';
 

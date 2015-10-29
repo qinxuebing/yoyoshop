@@ -1,10 +1,17 @@
 .login {
-  margin: auto;
-  width: 30%;
-  min-width: 200px;
+  width: 350px;
 }
-.login .input-group:nth-child(2) {
-  margin-top: 20px;
+.login ul {
+  border-bottom: 0px;
+}
+.login .tab-pane {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px 4px 0 0;
+}
+.login .tab-pane .input-group {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .product {
