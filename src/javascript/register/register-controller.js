@@ -4,7 +4,18 @@ define([
     'use strict';
 
     return function (scope) {
-        console.log('register controller');
-        this.scope = scope;
+        scope.reset = function(){
+
+        };
+
+
+
+        scope.submit = function(){
+            console.log('form',scope.registerForm);
+            if(scope.registerForm.$valid){
+
+            }
+        };
+
     };
 });
