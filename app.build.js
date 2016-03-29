@@ -15,6 +15,7 @@
         ngGrid: 'empty:',
         uiBootstrap:'empty:',
         q: 'empty:',
+        ngRoute: 'empty:',
         text:'../../node_modules/requirejs-text/text',
         template:'../template'
     }

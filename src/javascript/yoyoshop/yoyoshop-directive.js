@@ -7,7 +7,7 @@ define([
             restrict:'E',
             scope:{},
             template:template,
-            controller:['$scope', controller],
+            controller:['$scope','$location','$route', controller],
             link:function(scope,element,attr,ctrl){
                scope.ctrl = ctrl;
             }

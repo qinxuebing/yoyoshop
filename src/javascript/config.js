@@ -8,7 +8,8 @@ requirejs.config({
         q: 'q',
         text: 'text',
         main: 'main',
-        d3: 'd3'
+        d3: 'd3',
+        ngRoute:'angular-route',
     },
     shim: {
         'angular': {
@@ -20,6 +21,9 @@ requirejs.config({
         },
         'uiBootstrap': {
             deps: ['jquery', 'angular']
+        },
+        'ngRoute':{
+            deps:['jquery', 'angular']
         }
     },
     deps: ["main"],

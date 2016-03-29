@@ -1,8 +1,15 @@
 define([
 
 ],function(){
-    return function(scope){
+    return function(scope,$location,$route){
+
         this.scope = scope;
-        this.content='product';
+        scope.$watch('header',function(newValue,olderValue){
+        	console.log('route',$route);
+        	if(newValue){
+
+        		$location.path("/"+newValue);
+        	}
+        });
     }
 });

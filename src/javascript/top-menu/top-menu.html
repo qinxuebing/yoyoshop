@@ -1,0 +1,9 @@
+<div class="menu">
+    <div class="btn-group" ng-click="clickTopMenu()">
+        <label class="btn btn-primary" ng-model="header" btn-radio="'login'" ng-show="!isLoginIn">login</label>
+        <label class="btn btn-primary" ng-model="header" btn-radio="'product'">product</label>
+        <label class="btn btn-primary" ng-model="header" btn-radio="'shoppingCart'">shopping cart</label>
+        <label class="btn btn-primary" ng-model="header" btn-radio="'userInfo'" ng-show="isLoginIn">my account</label>
+        <label class="btn btn-primary" ng-model="header" btn-radio="'logout'" ng-show="isLoginIn">logout</label>
+    </div>
+</div>

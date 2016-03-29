@@ -1,18 +1,10 @@
 <div class="container-fluid">
-    <div class="menu">
-        <div class="btn-group" ng-init="header='login'">
-            <label class="btn btn-primary" ng-model="header" btn-radio="'login'" ng-show="!isLoginIn">login</label>
-            <label class="btn btn-primary" ng-model="header" btn-radio="'product'">product</label>
-            <label class="btn btn-primary" ng-model="header" btn-radio="'shoppingCart'">shopping cart</label>
-            <label class="btn btn-primary" ng-model="header" btn-radio="'logout'" ng-show="isLoginIn">logout</label>
-        </div>
-    </div>
+
+    <top-menu header="header"></top-menu>
 
 
     <div class="content">
-        <login ng-if="header==='login'"></login>
-        <product ng-if="header==='product'"></product>
-        <shopping-cart ng-if="header==='shoppingCart'"></shopping-cart>
+        <ng-view></ng-view>
     </div>
 
 </div>

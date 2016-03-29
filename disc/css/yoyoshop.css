@@ -1,5 +1,6 @@
 .login {
   width: 350px;
+  margin: auto;
 }
 .login ul {
   border-bottom: 0px;
@@ -12,6 +13,12 @@
 .login .tab-pane .input-group {
   margin-top: 15px;
   margin-bottom: 15px;
+}
+.login .tab-pane .button-row {
+  text-align: center;
+}
+.login .tab-pane .button-row button {
+  margin: 10px;
 }
 
 .product {
@@ -40,6 +47,29 @@
   _position: absolute;
 }
 
+.test-css {
+  background-image: url("/images/other/ocean.jpg");
+  width: 285px;
+  height: 178px;
+}
+.test-css h1 {
+  display: inline-block;
+  margin: 0 7%;
+}
+.test-css h1:nth-child(1) {
+  padding-top: 76px;
+  text-shadow: 2px 2px 1px rgba(123, 99, 99, 0.33);
+}
+.test-css .invert-image {
+  -moz-transform: scale(1, -1);
+  -webkit-transform: scale(1, -1);
+  -o-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  transform: scale(1, -1);
+  margin-top: -12px;
+  color: rgba(0, 0, 0, 0.2);
+}
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -52,8 +82,8 @@ a {
   margin-right: 20%;
   width: 100%;
 }
-.menu div {
-  margin-left: 70%;
+.menu .btn-group {
+  float: right;
 }
 .content {
   margin-top: 30px;

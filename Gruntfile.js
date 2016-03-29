@@ -47,7 +47,7 @@ module.exports = function (grunt) {
             main: {
                 files: [
                     // includes files within path
-                    {expand: true, flatten: true, src: ['src/images/*'], dest: 'disc/images/'},
+                    {expand: true, flatten: true, src: ['src/images/**/*'], dest: 'disc/images'},
                     {expand: true, flatten: true, cwd: 'src/', src: ['index.html'], dest: 'disc/', filter: 'isFile'}
                 ],
             },
@@ -72,6 +72,7 @@ module.exports = function (grunt) {
                         ngGrid: 'empty:',
                         uiBootstrap: 'empty:',
                         q: 'empty:',
+                        ngRoute: 'empty:',
                         text: '../../node_modules/requirejs-text/text',
                         template: '../template'
                     }

@@ -33,7 +33,6 @@ define([
                    self.setImageResource(product);
                 });
                 self.scope.products = products;
-                self.scope.$apply();
             });
         };
 

@@ -11,7 +11,6 @@ define([
 
 
         scope.submit = function(){
-            console.log('form',scope.registerForm);
             if(scope.registerForm.$valid){
 
             }
