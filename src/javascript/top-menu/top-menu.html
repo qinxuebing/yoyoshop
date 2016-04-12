@@ -1,9 +1,20 @@
-<div class="menu">
-    <div class="btn-group" ng-click="clickTopMenu()">
-        <label class="btn btn-primary" ng-model="header" btn-radio="'login'" ng-show="!isLoginIn">login</label>
-        <label class="btn btn-primary" ng-model="header" btn-radio="'product'">product</label>
-        <label class="btn btn-primary" ng-model="header" btn-radio="'shoppingCart'">shopping cart</label>
-        <label class="btn btn-primary" ng-model="header" btn-radio="'userInfo'" ng-show="isLoginIn">my account</label>
-        <label class="btn btn-primary" ng-model="header" btn-radio="'logout'" ng-show="isLoginIn">logout</label>
-    </div>
+<div class="top-menu">
+           <nav class="circular-menu">
+
+            <div class="circle" ng-click="clickTopMenu()">
+                <a href="" class="glyphicon glyphicon-home f-2x" value="home"></a>
+                <a href="" class="glyphicon glyphicon-shopping-cart f-2x" value="cart"></a>
+                <a href="" class="glyphicon glyphicon-comment f-2x" value="talk"></a>
+                <a href="" class="fa glyphicon glyphicon-user f-2x" value="account"></a>
+                <a href="" class="glyphicon glyphicon-heart f-2x" value="favor"></a>
+                <a href="" class="glyphicon glyphicon-search f-2x" value="search"></a>
+                <a href="" class="glyphicon glyphicon-bell f-2x" value="notification"></a>
+                <a href="" class="glyphicon glyphicon-wrench f-2x"></a>
+            </div>
+
+            <a href="" class="menu-button glyphicon glyphicon-align-justify f-2x"></a>
+
+        </nav>
+
+
 </div>
