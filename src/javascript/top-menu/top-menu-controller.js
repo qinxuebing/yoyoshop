@@ -1,8 +1,11 @@
 define([], function () {
     return function (scope, service) {
         scope.header='login';
+        scope.isOpened=false;
         scope.clickTopMenu = function(){
-            service.setCurrentMenu(scope.header);
+            console.log("click top menu");
+            scope.isOpened = ! scope.isOpened;
+            service.trigger(scope.header, scope.isOpened);
         }
     };
 });

@@ -2,13 +2,25 @@ define([], function () {
     'use strict';
 
     return function () {
-       this.currentMenu = '';
-        this.setCurrentMenu = function(currentMenu){
-            this.currentMenu = currentMenu;
-            console.log('in top menu service:',this.currentMenu);
-        }
-        this.getCurrentMenu = function(){
-            return this.currentMenu;
+      var currentMenu = '';
+        var isOpened = false;
+        var listeners = [];
+
+        this.addListener = function(callback){
+            listeners.push(callback);
         };
+
+        this.trigger = function(currentMenuParam,isOpenParam){
+            var olderMenu = currentMenu;
+            currentMenu = currentMenuParam;
+            isOpened = isOpenParam;
+            listeners.forEach(function(callback){
+                if(typeof callback === 'function'){
+                    callback(currentMenu,olderMenu,isOpened);
+                }
+            })
+        };
+
+
     }
 });

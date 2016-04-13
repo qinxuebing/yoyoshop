@@ -23,6 +23,13 @@ define([
 
                 element.find('.menu-button').on("click",function(e) {
                      element.find('.circle').toggleClass('open');
+                     scope.clickTopMenu();
+                });
+
+                element.find('.circle').on('click',function(e){
+                    scope.header = e.target.getAttribute("value");
+                    scope.clickTopMenu();
+                    element.find('.circle').toggleClass('open');
                 });
 
             }

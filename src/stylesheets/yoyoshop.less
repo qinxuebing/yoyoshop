@@ -4,17 +4,18 @@ body {
   position:relative;
 }
 
-a {
-  color: #00B7FF;
+div.mask {
+  position:           absolute;
+  z-index:            9;
+  top:                0;
+  left:               0;
+  width:              100%;
+  height:             100%;
+  background-color:   rgba(0,0,0,0.15);
 }
 
-.menu{
-  height: 35px;
-  margin-right: 20%;
-  width:100%;
-  .btn-group{
-   float:right;
-  }
+a {
+  color: #00B7FF;
 }
 
 .content{

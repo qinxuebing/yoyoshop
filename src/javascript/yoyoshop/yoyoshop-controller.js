@@ -1,15 +1,17 @@
 define([
 
 ],function(){
-    return function(scope,$location,$route){
+    return function(scope,$location,$route,topMenuService){
+        $location.path("/login");
 
-        this.scope = scope;
-        scope.$watch('header',function(newValue,olderValue){
-        	console.log('route',$route);
-        	if(newValue){
-
-        		$location.path("/"+newValue);
-        	}
+        topMenuService.addListener(function(newValue,olderValue,isOpened){
+            scope.$apply(function(){
+                if(newValue){
+                    $location.path("/"+newValue);
+                }
+                scope.isMask=isOpened;
+            });
         });
+
     }
 });
