@@ -1,3 +1,51 @@
+.home .second-box {
+  margin: 0;
+  padding: 0;
+}
+.home .second-box .container {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  perspective: 800px;
+  margin: 6em auto;
+}
+.home .second-box .cube {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+}
+.home .second-box .cube div {
+  border: 1px black solid;
+  opacity: 0.4;
+}
+.home .second-box .cube .face {
+  width: 300px;
+  height: 300px;
+  display: block;
+  position: absolute;
+  background: white;
+}
+.home .second-box .cube .front {
+  transform: rotateY(0deg) translateZ(150px);
+  background-size: cover;
+}
+.home .second-box .cube .back {
+  transform: rotateX(180deg) translateZ(150px);
+}
+.home .second-box .cube .right {
+  transform: rotateY(90deg) translateZ(150px);
+}
+.home .second-box .cube .left {
+  transform: rotateY(-90deg) translateZ(150px);
+}
+.home .second-box .cube .top {
+  transform: rotateX(90deg) translateZ(150px);
+}
+.home .second-box .cube .bottom {
+  transform: rotateX(-90deg) translateZ(150px);
+}
+
 .login {
   width: 350px;
   margin: auto;

@@ -9,7 +9,8 @@ define([
     'login/login-directive',
     'register/register-directive',
     'top-menu/top-menu-directive',
-    'app-route'
+    'app-route',
+    'home-page/home-page-directive'
 ], function (productDirective,
              ProductService,
              shoppingCartDirective,
@@ -20,7 +21,8 @@ define([
              loginDirective,
              registerDirective,
              topMenuDirective,
-             appRoute
+             appRoute,
+             homePageDirective
 ) {
 
     return function(app){
@@ -32,6 +34,7 @@ define([
         app.directive('login',loginDirective);
         app.directive('register',registerDirective);
         app.directive('topMenu',topMenuDirective);
+        app.directive('homePage',homePageDirective);
         app.service('productService',['$http',ProductService]);
         app.service('localstorageService',['$document',LocalStorageService]);
         app.service('topMenuService',TopMenuService);
